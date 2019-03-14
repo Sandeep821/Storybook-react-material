@@ -1,11 +1,11 @@
 {
-  "themeName": "GreyTheme",
-  "themeFile": "greyTheme.json",
+  "themeName": "CanadaVwTheme",
+  "themeFile": "CanadaVwTheme.json",
   "palette": {
     "primary1Color": "#03a9f4",
     "primary2Color": "#90caf9",
     "alternateTextColor": "#424242",
-    "canvasColor": "#616161",
+    "canvasColor": "linear-gradient(-180deg, #dbdee5 40%, #c6e2f0 90%)",
     "textColor": "#bdbdbd",
     "secondaryTextColor": "#bdbdbd",
     "alternateСanvasColor": "#222",

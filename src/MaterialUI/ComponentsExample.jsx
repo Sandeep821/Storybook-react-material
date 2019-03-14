@@ -25,7 +25,6 @@ import {
   Toggle,
 } from 'material-ui';
 
-import LogoUsulPro from './LogoUsulPro.png';
 
 function getStyles() {
     const styles = {

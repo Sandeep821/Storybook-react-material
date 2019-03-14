@@ -13,6 +13,29 @@ import Header from '../Header';
 import Intro from '../Intro';
 import '../App.css';
 
+
+import {
+  Avatar,
+  AppBar,Toolbar,Typography,Button,IconButton,MenuIcon,
+  Checkbox,
+  DatePicker,
+  Dialog,
+  DropDownMenu,
+  FlatButton,
+  Drawer,
+  MenuItem,
+  Paper,
+  RadioButton,
+  RadioButtonGroup,
+  RaisedButton,
+  Snackbar,
+  Slider,
+  Tabs,
+  Tab,
+  TextField,
+  Toggle,
+} from 'material-ui';
+
 const reqThemes = require.context('../.themes/', true, /.json/);
 const themesList = [];
 reqThemes.keys().forEach((filename) => {
@@ -44,23 +67,31 @@ storiesOf('React App', module)
         });
         return (<App />);
     })
-    .addWithInfo('App-header', '<Header />', () => withNote(
+    .addWithInfo('App Bar', '<Header />', () => withNote(
       `
-        Header Component
+        App Bar Component
 
         source: src/Header.jsx
         story: src/stories
         test: src/tests
       `,
-      <Header
-        title={text('Title', 'Welcome to React-Theming')}
-        subtitle={text('Subtitle', 'Storybook Boilerplate Project')}
-      />,
+
+      <div >
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="Menu"
+           >
+          </IconButton>
+          <RaisedButton primary>{text('Label1', 'Login')}</RaisedButton>
+        </Toolbar>
+      </AppBar>
+    </div>
+     ,
     ))
     .addWithInfo('App-intro', '<Intro />', () => withNote(
-      `
-        Intro Component
-
+      `Intro Component
         source: src/Intro.jsx
         story: src/stories
         test: src/tests
@@ -72,7 +103,34 @@ storiesOf('React App', module)
         {text('Label1', 'Hello Button')}
         {withNote(text('Label2', 'Hello Button'))}
       </div>
-    ));
+    ))
+
+    .add('Button Primary', () => (
+      <div style={{padding: "20px"}}>
+        <RaisedButton label= {text('Label1', 'Primary Button')} primary />
+      </div>
+    ))
+    .add('Button Secondary', () => (
+      <div style={{padding: "20px"}}>
+      <RaisedButton label="Secondary button" secondary />
+      </div>
+     ))
+    .add('Button default', () => <RaisedButton label="default button" default />)
+    .add('Button disabled', () => <RaisedButton label="disabled button" disabled />)
+
+    .add('All Buttons', () => (
+      <div style={{padding: "20px"}}>
+      <RaisedButton label="Primary button" primary />
+      <br/>  <br/>
+      <RaisedButton label="Secondary button" secondary />
+      <br/>  <br/>
+      <RaisedButton label="default button" default />
+      <br/>  <br/>
+      <RaisedButton label="disabled button" disabled />
+      </div>
+  ))
+
+
 
 
 function withNote(note, child) {

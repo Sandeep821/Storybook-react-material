@@ -38,8 +38,30 @@ class Intro extends React.Component {
           <div className="App-intro" style={{ maxWidth: 1000, margin: '0 auto' }}>
             <ThemeProvider setCSS={setCSS} >
               <h1>Quick start</h1>
+               <p>This project is transparent and friendly for developers.
+                 You do not need to eject anything. Therefore you can easily
+                 add your own configuration and extend it using any packages.</p>
+                 <p>
+                Let&apos;s select another theme for this page.
+                Do it via dropdown list at the bottom panel.
+                Out of the box there are three themes: &apos;Light&apos;,
+                &apos;Dark&apos; and &apos;Gray&apos;. Check out them.
+              </p>
 
-              <p>
+               <p>A short guide for other Storybook Addons will be here...</p>
+
+<h2>ThemeProvider:</h2>
+
+<code>&lt;ThemeProvider&gt;<br />
+  {'\u00A0\u00A0'}&lt;YourThemedComponentOrPlainHTML /&gt;<br />
+  &lt;/ThemeProvider&gt;</code>
+
+<p>A generic theme provider and (very) simple CSS styler</p>
+
+<h2>What is Theme?</h2>
+
+<p>It&apos;s just plain javascript object, typically with two levels of nesting.</p>
+              {/* <p>
                 At the heart of this project the desire to collect the best practices of
                  application development
                  via <a href="https://github.com/storybooks/react-storybook">React-Storybook</a>
@@ -153,7 +175,7 @@ class Intro extends React.Component {
                 See project&apos;s <a href="https://github.com/sm-react/react-theme-provider">
                   repo
                 </a>
-              </p>
+              </p> */}
               <br />
               <br />
 
